@@ -1,19 +1,20 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 import time
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome("C:\\Drivers\\chromedriver_win32\\chromedriver.exe")
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+
+
 driver.maximize_window()
-driver.get("https://radxup-colectiv-uat.azurewebsites.net/participant-login")
+driver.get("https://radxup-colectiv-dev.azurewebsites.net/participant-login")
 driver.find_element(By.CLASS_NAME, 'participant-signin').click()
+driver.find_elements()
 time.sleep(2)
 driver.find_element(By.CSS_SELECTOR, 'button').click()
 time.sleep(2)
-driver.find_element(By.ID, 'formBasicEmail').send_keys("jhon@yopmail.com")
+driver.find_element(By.ID, 'formBasicEmail').send_keys("jack11@yopmail.com")
 time.sleep(2)
-driver.find_element(By.NAME, 'password').send_keys("Test@123!!")
+driver.find_element(By.NAME, 'password').send_keys("Test@123")
 time.sleep(2)
 # login button
 driver.find_element(By.CSS_SELECTOR, 'button').click()
@@ -45,7 +46,6 @@ if heading.text == '':
 else:
     print('Study Name is visible')
 time.sleep(2)
-
 # Profile Dropdown
 driver.find_element(By.XPATH, '//*[@id="dropdown-basic"]/img').click()
 time.sleep(2)
