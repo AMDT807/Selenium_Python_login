@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 serv_obj = Service("C:\\Drivers\\chromedriver_win32\\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 driver.maximize_window()
+
 driver.get("https://radxup-colectiv-dev.azurewebsites.net/")
 email_box = driver.find_element(By.ID, 'formBasicEmail')
 print("Display Status of Email Field:", email_box.is_displayed())
@@ -50,7 +51,7 @@ for i in arr:
     # driver.find_element(By.CLASS_NAME, 'form-check-input').click()  This click on yes for system generate dates/
     driver.find_element(By.NAME, 'enable_group').click()
     time.sleep(5)
-    driver.execute_script("window.scrollBy(0,document.body.scrollheight)")
+    driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
     time.sleep(4)
     # continue
     driver.find_element(By.XPATH, '//button[normalize-space()="Next"]').click()
@@ -261,6 +262,9 @@ for i in arr:
     # click next
     driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[2]/div[2]/div/div[2]/div[3]/button').click()
     time.sleep(2)
+    # File Upload
+    # driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[2]/div[2]/div/div[1]/div/div[3]/img').send_keys("C:/Users/Mayank/Documents/workspace/Selenium_Python_login/pythonProject/Colectiv_selenium/Files/File1.pdf")
+    # time.sleep(5)
     driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
     time.sleep(2)
     # update study card
