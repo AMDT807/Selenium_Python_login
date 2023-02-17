@@ -50,8 +50,9 @@ for i in arr:
     # driver.find_element(By.CLASS_NAME, 'form-check-input').click()  This click on yes for system generate dates/
     driver.find_element(By.NAME, 'enable_group').click()
     time.sleep(5)
-
-    #continue
+    driver.execute_script("window.scrollBy(0,document.body.scrollheight)")
+    time.sleep(4)
+    # continue
     driver.find_element(By.XPATH, '//button[normalize-space()="Next"]').click()
     time.sleep(6)
     # CDE TO COLLECT SECTION
@@ -271,99 +272,7 @@ for i in arr:
     # cancel
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div[3]/button[1]').click()
 
-#  This is the end of Study Creation flow , and we are crating CDE Library from Below codes
 
-# CDE Library Management
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[1]/div/div[1]/div[4]/a/div/span').click()
-# time.sleep(5)
-#
-# # add new library
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[2]/button').click()
-# time.sleep(6)
-#
-# # enter version name
-# driver.find_element(By.ID, 'formName').send_keys("CDE CODEBOOK FOR TEST")
-# time.sleep(1)
-# # enter version number
-# driver.find_element(By.ID, 'formVersion').send_keys("VER1.0")
-# time.sleep(2)
-#
-# # section name
-# driver.find_element(By.ID, 'sectionName').send_keys('Section one')
-# time.sleep(3)
-#
-# # add question 1
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div/div/img').click()
-# time.sleep(3)
-#
-# # variable name 1 ENGLISH
-# driver.find_element(By.ID, 'sectionHint').send_keys("Name")
-# time.sleep(2)
-# driver.find_element(By.ID, 'selectQuestion').send_keys("Radio Button")
-# time.sleep(2)
-#
-# # Adult field level
-# # question 1
-# driver.find_element(By.NAME, 'FormsSections.0.FSQuestions.0.Adult.question').send_keys("What is your Name?")
-# time.sleep(3)
-# driver.execute_script("window.scrollBy(0,100)", "")
-# # hint question 1
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[2]/input').send_keys("Tell us abot your name")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,200)", "")
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[2]/div[2]/div/input').send_keys("01")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,100)", "")
-# # enter options
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[3]/div/table/tr[2]/td[1]/div/input').send_keys("Mayank")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,100)", "")
-# #add values
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[3]/div/table/tr[2]/td[2]/div/input').send_keys("02")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,200)", "")
-# time.sleep(2)
-# # click on add choice button
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[4]/div/img').click()
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,200)", "")
-# # add option for second choice
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[3]/div/table/tr[3]/td[1]/div/input').send_keys("Gaurav")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,200)", "")
-# # add values for second option
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[3]/div[3]/div/table/tr[3]/td[2]/div/input').send_keys("02")
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,200)", "")
-# # div close
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]/img').click()
-# time.sleep(2)
-# driver.execute_script("window.scrollBy(0,100)", "")
-# time.sleep(8)
-#
-# # Pediatric Field Level
-# # pediatric question 1
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[1]/div[1]/input').send_keys("What is your Name")
-# time.sleep(2)
-# # pediatric question Hint
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[2]/input').send_keys("Tell us about your name")
-# time.sleep(3)
-# driver.execute_script("window.scrollBy(0,100)", "")
-# # add value
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[2]/div[2]/div/input').send_keys("03")
-# time.sleep(2)
-# # add options for pediatirc
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[3]/div/table/tr[2]/td[1]/div/input').send_keys("Abhishek")
-# time.sleep(2)
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[3]/div/table/tr[2]/td[2]/div/input').send_keys("05")
-# time.sleep(2)
-# # click on add choice
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[4]/div/span').click()
-# time.sleep(2)
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[3]/div/table/tr[3]/td[1]/div/input').send_keys("amit")
-# time.sleep(2)
-# # add values
-# driver.find_element(By.XPATH, '/html/body/div/div[1]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/div[1]/div[3]/div[2]/div/div[3]/div[3]/div/table/tr[3]/td[2]/div/input').send_keys("06")
 
 
 
