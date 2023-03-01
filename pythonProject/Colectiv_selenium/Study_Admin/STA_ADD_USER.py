@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 serv_obj = Service("C:\\Drivers\\chromedriver_win32\\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 driver.maximize_window()
+
 driver.get("https://radxup-colectiv-dev.azurewebsites.net/")
 email_box = driver.find_element(By.ID, 'formBasicEmail')
 print("Display Status of Email Field:", email_box.is_displayed())

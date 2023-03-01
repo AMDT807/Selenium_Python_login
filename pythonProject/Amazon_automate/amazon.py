@@ -78,7 +78,6 @@ driver.find_element(By.XPATH, '//*[@id="icp-save-button"]/span/input').click()
 
 
 # Nab bar
-# . 1 click amazon tv
 time.sleep(10)
 Verify_amazon_tv = driver.find_element(By.XPATH, '//*[@id="nav-xshop"]/a[3]')
 print(Verify_amazon_tv.text)
