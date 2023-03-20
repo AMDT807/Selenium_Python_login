@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.chrome.service import Service
-serv_obj = Service("C:\\Drivers\\chromedriver_win32\\chromedriver.exe")
+serv_obj = Service("C:\WebDriver\chromedriver_win32 (1)\\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 driver.maximize_window()
 driver.get("https://radxup-colectiv-dev.azurewebsites.net/")

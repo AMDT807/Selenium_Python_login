@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 from selenium.webdriver.chrome.service import Service
-serv_obj = Service("C:\\Drivers\\chromedriver_win32\\chromedriver.exe")
+serv_obj = Service("C:\WebDriver\chromedriver_win32 (1)\\chromedriver.exe")
 driver = webdriver.Chrome(service=serv_obj)
 driver.maximize_window()
 
@@ -32,9 +32,9 @@ for i in arr:
     driver.find_element(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]').click()
     time.sleep(10)
     # Enter study Details
-    driver.find_element(By.NAME, 'study_id').send_keys("StudyOFSURVEY1" + str(i))
+    driver.find_element(By.NAME, 'study_id').send_keys("FeverSurvey1" + str(i))
     time.sleep(4)
-    driver.find_element(By.NAME, 'name').send_keys("CHOLERA DISEASE SURVEY" + str(i))
+    driver.find_element(By.NAME, 'name').send_keys("Viral Fever SURVEY" + str(i))
     time.sleep(4)
     driver.find_element(By.NAME, 'awardee_org').send_keys("Mahatma Gandhi Hospital")
     time.sleep(4)
@@ -275,12 +275,6 @@ for i in arr:
     time.sleep(3)
     # cancel
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div[3]/button[1]').click()
-
-
-
-
-
-
 
 while True:
     pass
